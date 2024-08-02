@@ -6,7 +6,7 @@
 /*   By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 12:32:14 by tsurma            #+#    #+#             */
-/*   Updated: 2024/07/31 17:20:22 by tsurma           ###   ########.fr       */
+/*   Updated: 2024/08/02 10:47:22 by tsurma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,10 +83,10 @@ void PhoneBook::SEARCH(void) {
 		std::cout << "Display index:";
 		std::getline(std::cin, line);
 		i = line[0] - 48;
-		if (i <= 7 && i >= 0) {
+		if (i <= 7 && i >= 0 && line.length() == 1) {
 			break;
-		std::cout << "Please use a valid index as an input" << std::endl;
 		}
+		std::cout << "Please use a valid index as an input" << std::endl;
 	}
 	if (this->contacts[i].GetFirstName().empty() == true) {
 		std::cout << "Contact is empty" << std::endl;
