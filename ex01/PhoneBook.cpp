@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/31 12:32:14 by tsurma            #+#    #+#             */
-/*   Updated: 2024/08/02 10:47:22 by tsurma           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook(void) {
@@ -64,7 +52,7 @@ void PhoneBook::SEARCH(void) {
 	for (int i = 0; i < 8; ++i) {
 		std::cout << std::setw(10) << i << "|";
 		if (this->contacts[i].GetFirstName().length() > 10)
-			std::cout << this->contacts[i].GetFirstName().substr(0, 9) << ".|";
+			std::cout << this->contacts[i].GetFirstName().substr(0, 8) << ".|";
 		else
 			std::cout << std::setw(10) << this->contacts[i].GetFirstName() << "|";
 		if (this->contacts[i].GetLastName().length() > 10)
